@@ -43,7 +43,7 @@ function Signup() {
             method:"POST",
             body:dataToSend
         }
-        let JSONData= await fetch("http://localhost:4343/signup",reqOption);
+        let JSONData= await fetch("/signup",reqOption);
         let JSOData=await JSONData.json();
         console.log(JSOData);
         if(JSOData.status=="incorrect"){

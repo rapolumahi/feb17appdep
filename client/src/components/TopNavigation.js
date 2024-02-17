@@ -26,7 +26,7 @@ function TopNavigation() {
         method:"DELETE",
         body:dataToSend
        }
-       let JSONData=await fetch("http://localhost:4343/delete",reqOption);
+       let JSONData=await fetch("/delete",reqOption);
        let JSOData=await JSONData.json();
        console.log(JSOData);
        if(JSOData.status="success"){

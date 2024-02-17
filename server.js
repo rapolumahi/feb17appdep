@@ -7,6 +7,8 @@ let app = express();
 app.use(cors());
 
 app.use("/upload", express.static("upload"));
+app.use(express.static(path.join(__dirname,"./client/build")));
+const path=require("node:path");
 
 let userRouter = require("./router/user");
 

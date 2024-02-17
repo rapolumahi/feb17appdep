@@ -14,7 +14,7 @@ function Home() {
       {/* <h2>welcome to {storeObj.userDetails.data.firstname}</h2> */}
       <h2> welcome to {storeObj && storeObj.userDetails && storeObj.userDetails.data ? `${ storeObj.userDetails.data.firstname}`:"User"}</h2>
       <img className="home-image"
-        src={`http://localhost:4343/${storeObj.userDetails.data.profilepic}`}
+        src={`/${storeObj.userDetails.data.profilepic}`}
       ></img>
     </div>
   );

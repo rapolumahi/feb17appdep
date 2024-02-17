@@ -27,7 +27,7 @@ function EditProfile() {
         genderRadioRef.current.value=storeObj.userDetails.data.gender;        
         phonenumberNumberRef.current.value=storeObj.userDetails.data.phonenumber;
         passwordInputRef.current.value=storeObj.userDetails.data.password;
-        setprofilepic(`http://localhost:4343/${storeObj.userDetails.data.profilepic }`)
+        setprofilepic(`/${storeObj.userDetails.data.profilepic }`)
  
       
 
@@ -49,7 +49,7 @@ function EditProfile() {
             method:"PATCH",
             body:dataToSend
         }
-        let JSONData= await fetch("http://localhost:4343/update",reqOption);
+        let JSONData= await fetch("/update",reqOption);
         let JSOData=await JSONData.json();
         console.log(JSOData);
       if(JSOData.status=="success"){
