@@ -16,6 +16,8 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+app.use(express.static(path.join(__dirname,"./client/build")));
+const path=require("node:path")
 
 // app.use("/upload", express.static("upload"));
 
